@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: cc4de834d7ada1347b56699dba000bce
+timeCreated: 1511059091
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: p1_spritesheet_0
+    21300002: p1_spritesheet_1
+    21300004: p1_spritesheet_2
+    21300006: p1_spritesheet_3
+    21300008: p1_spritesheet_4
+    21300010: p1_spritesheet_5
+    21300012: p1_spritesheet_6
+    21300014: p1_spritesheet_7
+    21300016: p1_spritesheet_8
+    21300018: p1_spritesheet_9
+    21300020: p1_spritesheet_10
+    21300022: p1_spritesheet_11
+    21300024: p1_spritesheet_12
+    21300026: p1_spritesheet_13
+    21300028: p1_spritesheet_14
+    21300030: p1_spritesheet_15
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: p1_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 194
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 195
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 196
+        width: 71
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 191
+        width: 70
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 191
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 191
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 194
+        width: 69
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 72
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 95
+        width: 71
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 94
+        width: 70
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 93
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 95
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 119
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 93
+        width: 67
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: p1_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -187, y: -102}
+      - {x: -188, y: -115}
+      - {x: -188, y: -124}
+      - {x: -185, y: -144}
+      - {x: -128, y: -144}
+      - {x: -117, y: -126}
+      - {x: -36, y: -33}
+      - {x: -36, y: 25}
+      - {x: -52, y: 47}
+      - {x: -81, y: 47}
+      - {x: -111, y: 39}
+      - {x: -106, y: 21}
+      - {x: -107, y: 0}
+      - {x: -107, y: 23}
+      - {x: -120, y: 45}
+      - {x: -132, y: 47}
+      - {x: -162, y: 47}
+      - {x: -179, y: 27}
+      - {x: -179, y: 19}
+      - {x: -178, y: -2}
+      - {x: -179, y: 2}
+      - {x: -179, y: 24}
+      - {x: -191, y: 44}
+      - {x: -199, y: 47}
+      - {x: -235, y: 47}
+      - {x: -254, y: 29}
+      - {x: -254, y: -26}
+      - {x: -238, y: -45}
+      - {x: -230, y: -49}
+      - {x: -227, y: -50}
+      - {x: -196, y: -50}
+      - {x: -230, y: -50}
+      - {x: -245, y: -41}
+      - {x: -254, y: -64}
+      - {x: -254, y: -131}
+      - {x: -248, y: -144}
+      - {x: -195, y: -144}
+      - {x: -188, y: -124}
+      - {x: -188, y: -112}
+      - {x: -190, y: -110}
+    - - {x: -19, y: 43}
+      - {x: -32, y: 32}
+      - {x: -34, y: 26}
+      - {x: -34, y: -32}
+      - {x: -25, y: -53}
+      - {x: 36, y: -53}
+      - {x: 36, y: 43}
+    - - {x: 110, y: -5}
+      - {x: 110, y: 30}
+      - {x: 95, y: 45}
+      - {x: 58, y: 45}
+      - {x: 53, y: 43}
+      - {x: 40, y: 23}
+      - {x: 40, y: -32}
+      - {x: 65, y: -51}
+      - {x: 82, y: -51}
+      - {x: 85, y: -48}
+      - {x: 106, y: -30}
+      - {x: 105, y: -21}
+    - - {x: 247, y: 144}
+      - {x: 191, y: 144}
+      - {x: 182, y: 125}
+      - {x: 182, y: 78}
+      - {x: 183, y: 77}
+      - {x: 182, y: 73}
+      - {x: 182, y: -45}
+      - {x: 254, y: -45}
+      - {x: 254, y: 136}
+      - {x: 251, y: 142}
+    - - {x: 130, y: 142}
+      - {x: 109, y: 130}
+      - {x: 109, y: -24}
+      - {x: 112, y: -27}
+      - {x: 181, y: -27}
+      - {x: 183, y: -17}
+      - {x: 183, y: 134}
+      - {x: 174, y: 142}
+    - - {x: -4, y: 144}
+      - {x: -14, y: 144}
+      - {x: -31, y: 127}
+      - {x: -34, y: 117}
+      - {x: -34, y: 103}
+      - {x: -33, y: 94}
+      - {x: -36, y: 85}
+      - {x: -34, y: 104}
+      - {x: -34, y: 119}
+      - {x: -33, y: 124}
+      - {x: -45, y: 144}
+      - {x: -87, y: 144}
+      - {x: -109, y: 126}
+      - {x: -109, y: 75}
+      - {x: -103, y: 75}
+      - {x: -98, y: 45}
+      - {x: -53, y: 45}
+      - {x: -47, y: 57}
+      - {x: -47, y: 59}
+      - {x: -13, y: 45}
+      - {x: 25, y: 45}
+      - {x: 37, y: 55}
+      - {x: 37, y: 130}
+      - {x: 19, y: 142}
+    - - {x: 39, y: 141}
+      - {x: 39, y: 55}
+      - {x: 42, y: 45}
+      - {x: 105, y: 45}
+      - {x: 109, y: 60}
+      - {x: 109, y: 134}
+      - {x: 94, y: 141}
+    - - {x: -240, y: 144}
+      - {x: -252, y: 138}
+      - {x: -252, y: 58}
+      - {x: -239, y: 48}
+      - {x: -205, y: 48}
+      - {x: -181, y: 58}
+      - {x: -181, y: 130}
+      - {x: -194, y: 144}
+    - - {x: -121, y: 144}
+      - {x: -157, y: 144}
+      - {x: -165, y: 142}
+      - {x: -177, y: 124}
+      - {x: -177, y: 54}
+      - {x: -165, y: 49}
+      - {x: -121, y: 49}
+      - {x: -109, y: 69}
+      - {x: -107, y: 89}
+      - {x: -107, y: 130}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
