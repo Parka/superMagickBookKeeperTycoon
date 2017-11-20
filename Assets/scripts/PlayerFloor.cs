@@ -7,7 +7,11 @@ public class PlayerFloor : ComponentState {
     private Rigidbody2D rb;
     [SerializeField]
     private int vel = 5;
+    [SerializeField]
+    public Collider2D ladderPlayerCollider;
     private GameObject currentLadder;
+
+
 
     // Use this for initialization
     void Start()
@@ -35,7 +39,7 @@ public class PlayerFloor : ComponentState {
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Ladder")
+        if (collider.gameObject.tag == "Ladder" && collider.IsTouching(ladderPlayerCollider))
             currentLadder = collider.gameObject;
     }
     private void OnTriggerExit2D(Collider2D collider)

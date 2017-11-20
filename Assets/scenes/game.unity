@@ -269,7 +269,7 @@ Prefab:
     - target: {fileID: 61137601714704938, guid: 2861611d9ed08f64b800b37f29765c99,
         type: 2}
       propertyPath: m_Size.x
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 114084567660796888, guid: 2861611d9ed08f64b800b37f29765c99,
         type: 2}
@@ -279,6 +279,11 @@ Prefab:
     - target: {fileID: 1802893785477600, guid: 2861611d9ed08f64b800b37f29765c99, type: 2}
       propertyPath: m_TagString
       value: Ladder
+      objectReference: {fileID: 0}
+    - target: {fileID: 61137601714704938, guid: 2861611d9ed08f64b800b37f29765c99,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114084567660796888, guid: 2861611d9ed08f64b800b37f29765c99, type: 2}
@@ -295,9 +300,10 @@ GameObject:
   - component: {fileID: 844510607}
   - component: {fileID: 844510606}
   - component: {fileID: 844510605}
-  - component: {fileID: 844510610}
   - component: {fileID: 844510609}
   - component: {fileID: 844510612}
+  - component: {fileID: 844510611}
+  - component: {fileID: 844510610}
   m_Layer: 0
   m_Name: pj
   m_TagString: Untagged
@@ -410,6 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateManager: {fileID: 0}
   vel: 5
+  ladderPlayerCollider: {fileID: 844510611}
 --- !u!114 &844510610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,14 +428,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364aeed6539e15d41b0d8329c29aba6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: {fileID: 844510609}
+  currentState: {fileID: 0}
+--- !u!61 &844510611
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844510604}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0020783544, y: -0.015234709}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.66, y: 0.93}
+    newSize: {x: 0.66, y: 0.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06779373, y: 0.86296767}
+  m_EdgeRadius: 0
 --- !u!114 &844510612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 844510604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49e4a25848397164a890ca37bf7e528e, type: 3}
   m_Name: 
