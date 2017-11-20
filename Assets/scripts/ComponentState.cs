@@ -6,11 +6,12 @@ using UnityEngine;
 public class ComponentState : MonoBehaviour {
 
     public ComponentStateManager stateManager;
-    private Dictionary<Func<bool>,Type> checks = new Dictionary<Func<bool>, Type>();
+    protected Dictionary<Func<bool>,Type> checks = new Dictionary<Func<bool>, Type>();
 
     private void Awake()
     {
-        stateManager = GetComponent<ComponentStateManager>();    
+        if(stateManager == null)
+            stateManager = GetComponent<ComponentStateManager>();    
     }
     // Use this for initialization
     void Start () {

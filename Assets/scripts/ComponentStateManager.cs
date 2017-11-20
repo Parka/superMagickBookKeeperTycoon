@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class ComponentStateManager : MonoBehaviour {
 
-    private Dictionary<Type, ComponentState> states = new Dictionary<Type, ComponentState>();
+    protected Dictionary<Type, ComponentState> states = new Dictionary<Type, ComponentState>();
 
     [SerializeField]
     private ComponentState currentState;
 	
     // Use this for initialization
-	void Start () {
+	protected void Start () {
         // 
         foreach (ComponentState state in GetComponents<ComponentState>())
         {
@@ -29,6 +29,7 @@ public class ComponentStateManager : MonoBehaviour {
 
     public void ChangeStateTo(Type type)
     {
+        Debug.Log(type);
         if(states[type] != null)
         {
             currentState.enabled = false;
