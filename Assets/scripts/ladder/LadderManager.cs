@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateManager : ComponentStateManager {
+public class LadderManager : MonoBehaviour {
 
+    public float vel = 3;
 	// Use this for initialization
 	void Start () {
-        base.Start();
+		
 	}
 	
 	// Update is called once per frame

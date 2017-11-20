@@ -112,6 +112,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &48351731 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1802893785477600, guid: 2861611d9ed08f64b800b37f29765c99,
+    type: 2}
+  m_PrefabInternal: {fileID: 667651372}
+--- !u!114 &48351736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48351731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d408d710b1bc61d48b3c56d34b620053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vel: 2
 --- !u!1 &164591558
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,10 +442,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 844510604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a95d92290196ec4682ae7995c3cc0bd, type: 3}
+  m_Script: {fileID: 11500000, guid: becf4e649faa8b74fb2dec21c6482683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 0}
+  currentLadder: {fileID: 0}
 --- !u!61 &844510611
 BoxCollider2D:
   m_ObjectHideFlags: 0
