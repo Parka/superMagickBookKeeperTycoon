@@ -34,7 +34,8 @@ public class PlayerBookCarrying : MonoBehaviour {
                 targetBook = null;
                 carriedBook.transform.SetParent(gameObject.transform);
                 carriedBook.transform.SetPositionAndRotation(bookGrabPosition.position, bookGrabPosition.rotation);
-                carriedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                carriedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                carriedBook.GetComponent<Collider2D>().isTrigger = true;
                 carriedBook.GetComponent<SpriteRenderer>().sortingOrder = 4;
             }
             else if(carriedBook != null)
@@ -43,6 +44,7 @@ public class PlayerBookCarrying : MonoBehaviour {
                 carriedBook.transform.SetParent(null);
                 carriedBook.transform.position = oldPosition;
                 carriedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                carriedBook.GetComponent<Collider2D>().isTrigger = false;
                 carriedBook.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 carriedBook = null;
             }
