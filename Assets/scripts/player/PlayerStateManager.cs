@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateManager : ComponentStateManager {
+public class PlayerStateManager: ComponentStateManager<PlayerStateManager>
+{
 
     public GameObject currentLadder;
 

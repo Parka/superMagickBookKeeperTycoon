@@ -3,17 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComponentStateManager : MonoBehaviour {
+public class ComponentStateManager<TManager> : MonoBehaviour
+    where TManager : ComponentStateManager<TManager>
+{
 
-    protected Dictionary<Type, ComponentState> states = new Dictionary<Type, ComponentState>();
+    protected Dictionary<Type, ComponentState<TManager>> states = new Dictionary<Type, ComponentState<TManager>>();
 
     [SerializeField]
-    private ComponentState currentState;
+    private ComponentState<TManager> currentState;
 	
     // Use this for initialization
 	protected void Start () {
         // 
-        foreach (ComponentState state in GetComponents<ComponentState>())
+        foreach (ComponentState<TManager> state in GetComponents<ComponentState<TManager>>())
         {
             if (currentState == null)
                 currentState = state;
@@ -37,11 +39,11 @@ public class ComponentStateManager : MonoBehaviour {
             currentState.enabled = true;
         }
     }
-    public void ChangeStateTo(ComponentState state)
+    public void ChangeStateTo(ComponentState<TManager> state)
     {
         ChangeStateTo(state.GetType());
     }
-    public void ChangeStateTo<T>() where T : ComponentState
+    public void ChangeStateTo<T>() where T : ComponentState<TManager>
     {
         ChangeStateTo(typeof(T));
     }

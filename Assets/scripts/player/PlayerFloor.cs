@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFloor : ComponentState {
+public class PlayerFloor : ComponentState<PlayerStateManager> {
 
     private Rigidbody2D rb;
     [SerializeField]
@@ -18,7 +18,7 @@ public class PlayerFloor : ComponentState {
 
         addCheck<PlayerLadder>(() =>
         {
-            return Input.GetAxis("Vertical") > 0 && ((PlayerStateManager)stateManager).currentLadder != null;
+            return Input.GetAxis("Vertical") > 0 && stateManager.currentLadder != null;
         });
 
     }
@@ -39,11 +39,11 @@ public class PlayerFloor : ComponentState {
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Ladder" && collider.IsTouching(ladderPlayerCollider))
-            ((PlayerStateManager)stateManager).currentLadder = collider.gameObject;
+            stateManager.currentLadder = collider.gameObject;
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Ladder")
-            ((PlayerStateManager)stateManager).currentLadder = null;
+            stateManager.currentLadder = null;
     }
 }

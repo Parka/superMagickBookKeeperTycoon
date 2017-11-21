@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLadder : ComponentState {
+public class PlayerLadder : ComponentState<PlayerStateManager>{
 
     private Rigidbody2D rb;
     private Rigidbody2D lrb;
@@ -14,8 +14,8 @@ public class PlayerLadder : ComponentState {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        lrb = ((PlayerStateManager)stateManager).currentLadder.GetComponent<Rigidbody2D>();
-        ladderVel = ((PlayerStateManager)stateManager).currentLadder.GetComponent<LadderManager>().vel;
+        lrb = stateManager.currentLadder.GetComponent<Rigidbody2D>();
+        ladderVel = stateManager.currentLadder.GetComponent<LadderManager>().vel;
         addCheck<PlayerFloor>(() =>
         {
             return Input.GetAxis("Vertical") < 0 && isOnFloor;

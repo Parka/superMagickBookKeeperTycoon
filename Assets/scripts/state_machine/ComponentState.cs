@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComponentState : MonoBehaviour {
+public class ComponentState<TManager> : MonoBehaviour
+    where TManager : ComponentStateManager<TManager>
+{
 
-    public ComponentStateManager stateManager;
+    public TManager stateManager;
     protected Dictionary<Func<bool>,Type> checks = new Dictionary<Func<bool>, Type>();
 
     private void Awake()
     {
         if(stateManager == null)
-            stateManager = GetComponent<ComponentStateManager>();    
+            stateManager = GetComponent<TManager>();    
     }
     // Use this for initialization
     void Start () {
@@ -31,11 +33,12 @@ public class ComponentState : MonoBehaviour {
     {
         checks.Add(func, type);
     }
-    protected void addCheck<T>(Func<bool> func) where T : ComponentState
+    protected  void addCheck<T>(Func<bool> func) where T : ComponentState<TManager>
     {
         checks.Add(func, typeof(T));
     }
-    protected void ChangeStateTo(ComponentState state)
+
+    protected void ChangeStateTo(ComponentState<TManager> state)
     {
         if (stateManager != null)
             stateManager.ChangeStateTo(state);
@@ -45,7 +48,7 @@ public class ComponentState : MonoBehaviour {
         if (stateManager != null)
             stateManager.ChangeStateTo(type);
     }
-    protected void ChangeStateTo<T>() where T : ComponentState
+    protected void ChangeStateTo<T>() where T : ComponentState<TManager>
     {
         if (stateManager != null)
             stateManager.ChangeStateTo<T>();
