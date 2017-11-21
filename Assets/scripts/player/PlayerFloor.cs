@@ -8,7 +8,7 @@ public class PlayerFloor : ComponentState {
     [SerializeField]
     private float vel = 5;
     [SerializeField]
-    public Collider2D ladderPlayerCollider;
+    private Collider2D ladderPlayerCollider;
 
 
     // Use this for initialization
