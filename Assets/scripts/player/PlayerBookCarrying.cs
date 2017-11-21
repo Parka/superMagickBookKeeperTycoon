@@ -9,6 +9,9 @@ public class PlayerBookCarrying : MonoBehaviour {
     private Collider2D bookPlayerCollider;
     [SerializeField]
     private Text targetBookText; //This is to be changed for something more general
+    [SerializeField]
+    private Transform bookGrabPosition;
+
     private GameObject targetBook;
     private GameObject carryedBook;
 
@@ -25,12 +28,17 @@ public class PlayerBookCarrying : MonoBehaviour {
                 carryedBook = targetBook;
                 targetBook = null;
                 carryedBook.transform.SetParent(gameObject.transform);
-                carryedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                carryedBook.transform.SetPositionAndRotation(bookGrabPosition.position, bookGrabPosition.rotation);
+                carryedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                carryedBook.GetComponent<SpriteRenderer>().sortingOrder = 4;
             }
             else if(carryedBook != null)
             {
+                Vector2 oldPosition = carryedBook.transform.position;
                 carryedBook.transform.SetParent(null);
+                carryedBook.transform.position = oldPosition;
                 carryedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                carryedBook.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 carryedBook = null;
             }
         }
