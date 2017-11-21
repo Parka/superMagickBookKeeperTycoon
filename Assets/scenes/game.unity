@@ -486,6 +486,14 @@ Prefab:
       propertyPath: bookName
       value: The Red Book
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 355bff8b73a404c49a29acbf56925e7f, type: 2}
   m_IsPrefabParent: 0
@@ -749,7 +757,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.48432404, y: 0.043563366}
+  m_Offset: {x: 0.3659879, y: -0.006061554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -760,7 +768,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19361389, y: 0.15610713}
+  m_Size: {x: 0.43028617, y: 0.57600987}
   m_EdgeRadius: 0
 --- !u!114 &844510614
 MonoBehaviour:

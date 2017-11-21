@@ -32,6 +32,7 @@ public class PlayerFloor : ComponentState {
     protected override void Update()
     {
         base.Update();
+        rb.gravityScale = 1;
         rb.velocity = Vector2.Scale(rb.velocity,Vector2.up) + vel * Input.GetAxis("Horizontal") * Vector2.right;
     }
 

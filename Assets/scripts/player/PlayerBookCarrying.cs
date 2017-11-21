@@ -25,10 +25,12 @@ public class PlayerBookCarrying : MonoBehaviour {
                 carryedBook = targetBook;
                 targetBook = null;
                 carryedBook.transform.SetParent(gameObject.transform);
+                carryedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             }
             else if(carryedBook != null)
             {
                 carryedBook.transform.SetParent(null);
+                carryedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 carryedBook = null;
             }
         }
