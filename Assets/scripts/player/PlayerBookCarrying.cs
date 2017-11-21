@@ -13,7 +13,8 @@ public class PlayerBookCarrying : MonoBehaviour {
     private Transform bookGrabPosition;
 
     private GameObject targetBook;
-    private GameObject carryedBook;
+    private HashSet<GameObject> targetbooks = new HashSet<GameObject>();
+    private GameObject carriedBook;
 
     // Use this for initialization
     void Start () {
@@ -22,45 +23,64 @@ public class PlayerBookCarrying : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        targetBook = getClosestBook();
+        targetBookText.text = (targetBook != null)?targetBook.GetComponent<BookInfo>().bookName:null;
+        
+            
         if (Input.GetButtonDown("Jump") ){
-            if (carryedBook == null && targetBook != null)
+            if (carriedBook == null && targetBook != null)
             {
-                carryedBook = targetBook;
+                carriedBook = targetBook;
                 targetBook = null;
-                carryedBook.transform.SetParent(gameObject.transform);
-                carryedBook.transform.SetPositionAndRotation(bookGrabPosition.position, bookGrabPosition.rotation);
-                carryedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                carryedBook.GetComponent<SpriteRenderer>().sortingOrder = 4;
+                carriedBook.transform.SetParent(gameObject.transform);
+                carriedBook.transform.SetPositionAndRotation(bookGrabPosition.position, bookGrabPosition.rotation);
+                carriedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                carriedBook.GetComponent<SpriteRenderer>().sortingOrder = 4;
             }
-            else if(carryedBook != null)
+            else if(carriedBook != null)
             {
-                Vector2 oldPosition = carryedBook.transform.position;
-                carryedBook.transform.SetParent(null);
-                carryedBook.transform.position = oldPosition;
-                carryedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                carryedBook.GetComponent<SpriteRenderer>().sortingOrder = 1;
-                carryedBook = null;
+                Vector2 oldPosition = carriedBook.transform.position;
+                carriedBook.transform.SetParent(null);
+                carriedBook.transform.position = oldPosition;
+                carriedBook.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                carriedBook.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                carriedBook = null;
             }
         }
+    }
+    private GameObject getClosestBook()
+    {
+        float closestDistance = float.PositiveInfinity;
+        float currentDistance;
+        GameObject candidate = null;
+
+        foreach (GameObject book in targetbooks)
+        {
+            if (book == carriedBook) continue;
+
+            currentDistance = (bookGrabPosition.position - book.transform.position).sqrMagnitude;
+            if (currentDistance<closestDistance)
+            {
+                closestDistance = currentDistance;
+                candidate = book;
+            }
+
+        }
+        return candidate;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Book" && collider.IsTouching(bookPlayerCollider) && carryedBook == null)
+        if (collider.gameObject.tag == "Book" && collider.IsTouching(bookPlayerCollider))
         {
-            targetBook = collider.gameObject;
-            targetBookText.text = targetBook.GetComponent<BookInfo>().bookName;
-            
-            Debug.Log("BOOK");
+            targetbooks.Add(collider.gameObject);
         }
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Book" && !collider.IsTouching(bookPlayerCollider) && targetBook == collider.gameObject && carryedBook == null)
+        if (collider.gameObject.tag == "Book" && !collider.IsTouching(bookPlayerCollider))
         {
-            targetBook = null;
-            targetBookText.text = "NO BOOK";
-            Debug.Log("NO MORE BOOK");
+            targetbooks.Remove(collider.gameObject);
         }
     }
 }
