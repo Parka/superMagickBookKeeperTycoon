@@ -38,7 +38,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683602500728354}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -77,6 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac0f844e9e8eef408e1dc2cda6709df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  topic: 0
   bookName: The Red Book
 --- !u!212 &212403498101377138
 SpriteRenderer:
