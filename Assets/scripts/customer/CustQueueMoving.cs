@@ -22,23 +22,16 @@ public class CustQueueMoving : ComponentState<CustStateManager>
         rb = GetComponent<Rigidbody2D>();
         addCheck<CustCounter>(() =>
         {
-            if (hitCounter)
-            {
-                hitCounter = false;
-                return true;
-            }
-            return false;
+            return hitCounter;
         });
         addCheck<CustQueueStopped>(() =>
         {
-            if (hitCust)
-            {
-                hitCust = false;
-                return true;
-            }
-            return false;
+            return hitCust;
         });
-        //Should add check for "leave"
+		addCheck<CustLeave>(() =>
+		{
+			return stateManager.patienceLeft<0;
+		});
     }
 
     // Update is called once per frame
@@ -48,6 +41,12 @@ public class CustQueueMoving : ComponentState<CustStateManager>
         rb.AddForce(Vector2.right * moveForce);
     }
     
+    private void OnEnable()
+    {
+        hitCounter = false;
+        hitCust = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Customer" && collider.IsTouching(frontCollider))

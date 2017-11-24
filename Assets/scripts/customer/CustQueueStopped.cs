@@ -18,14 +18,12 @@ public class CustQueueStopped : ComponentState<CustStateManager>
         rb = GetComponent<Rigidbody2D>();
         addCheck<CustQueueMoving>(() =>
         {
-            if (queueClear)
-            {
-                queueClear = false;
-                return true;
-            }
-            return false;
+            return queueClear;
         });
-        //Should add check for "leave"
+		addCheck<CustLeave>(() =>
+		{
+			return stateManager.patienceLeft<0;
+		});
     }
 
     // Update is called once per frame
@@ -34,7 +32,12 @@ public class CustQueueStopped : ComponentState<CustStateManager>
         base.Update();
         rb.velocity = Vector2.zero;
     }
-    
+
+    private void OnEnable()
+    {
+        queueClear = false;
+    }
+
     private void OnTriggerExit2D(Collider2D collider)
     {
        

@@ -24,10 +24,11 @@ GameObject:
   - component: {fileID: 61127987254180036}
   - component: {fileID: 70223201605784188}
   - component: {fileID: 50082839512203882}
-  - component: {fileID: 114114874301991446}
-  - component: {fileID: 114332856691385752}
-  - component: {fileID: 114036925828768644}
-  - component: {fileID: 114559833800200968}
+  - component: {fileID: 114769540234704758}
+  - component: {fileID: 114885331331194712}
+  - component: {fileID: 114380310906232926}
+  - component: {fileID: 114962645683115750}
+  - component: {fileID: 114812475930392396}
   m_Layer: 0
   m_Name: customer
   m_TagString: Customer
@@ -42,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1129136572096742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.85, y: -2, z: 0}
+  m_LocalPosition: {x: -6.679814, y: -1.7516038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -133,7 +134,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.66, y: 0.92}
   m_Direction: 0
---- !u!114 &114036925828768644
+--- !u!114 &114380310906232926
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -144,9 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97dca9242e970547814d6a70c4e6401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateManager: {fileID: 114114874301991446}
+  stateManager: {fileID: 114769540234704758}
   frontCollider: {fileID: 61871667422698784}
---- !u!114 &114114874301991446
+--- !u!114 &114769540234704758
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -157,23 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef1e0231beb9cf4896a5ed2179b1889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patience: 30
---- !u!114 &114332856691385752
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1129136572096742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b57401833433c624b8c7c8db6fa28b06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateManager: {fileID: 114114874301991446}
-  backCollider: {fileID: 61127987254180036}
-  frontCollider: {fileID: 61871667422698784}
-  moveForce: 5
---- !u!114 &114559833800200968
+  patience: 5
+  patienceLeft: 0
+--- !u!114 &114812475930392396
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -184,7 +171,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f907cd498b32044b598a1b6c382bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateManager: {fileID: 114114874301991446}
+  stateManager: {fileID: 114769540234704758}
+--- !u!114 &114885331331194712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129136572096742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b57401833433c624b8c7c8db6fa28b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateManager: {fileID: 114769540234704758}
+  backCollider: {fileID: 61127987254180036}
+  frontCollider: {fileID: 61871667422698784}
+  moveForce: 5
+--- !u!114 &114962645683115750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129136572096742}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71de7a6aa9370104389621184bd25edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateManager: {fileID: 114769540234704758}
+  speed: 3
 --- !u!212 &212418683597516622
 SpriteRenderer:
   m_ObjectHideFlags: 1

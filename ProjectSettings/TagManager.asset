@@ -9,6 +9,7 @@ TagManager:
   - Book
   - Counter
   - Customer
+  - Exit
   layers:
   - Default
   - TransparentFX
