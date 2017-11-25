@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CustCounter : ComponentState<CustStateManager>
 {
+	[SerializeField]
+	private float extraPatience = 3;
     // Use this for initialization
     void Start()
     {
@@ -13,7 +15,9 @@ public class CustCounter : ComponentState<CustStateManager>
             return stateManager.patienceLeft<0;
         });
     }
-
+	private void OnEnable(){
+		stateManager.patienceLeft += extraPatience; //When getting to the counter, you get some extra patience... 
+	}
     // Update is called once per frame
     protected override void Update()
     {
