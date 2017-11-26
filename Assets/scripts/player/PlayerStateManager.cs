@@ -13,7 +13,11 @@ public class PlayerStateManager: ComponentStateManager<PlayerStateManager>
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if (Input.GetAxis("Horizontal") > 0)
+            transform.localScale = Vector2.up + Vector2.right;
+        if (Input.GetAxis("Horizontal") < 0)
+            transform.localScale = Vector2.up + Vector2.left;
+    }
 }
