@@ -34,6 +34,7 @@ public class BookManager : MonoBehaviour {
 		SpriteRenderer sr = book.GetComponent<SpriteRenderer> ();
 		BookInfo bi = book.GetComponent<BookInfo> ();
 
+		sr.sprite =   Resources.Load<Sprite>(string.Format("img/book{0}", Random.Range((int)1,4)));
 		sr.color = new Color (Random.value, Random.value, Random.value, 1.0f);
 
 		bi.type = (BookManager.BookType)Random.Range(0, System.Enum.GetValues(typeof(BookManager.BookType)).Length);

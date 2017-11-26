@@ -31,7 +31,6 @@ public class ComponentStateManager<TManager> : MonoBehaviour
 
     public void ChangeStateTo(Type type)
     {
-        Debug.Log(type);
         if(states[type] != null)
         {
             currentState.enabled = false;

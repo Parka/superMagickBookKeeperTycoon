@@ -80,6 +80,8 @@ MonoBehaviour:
   type: 0
   topic: 0
   bookName: The Red Book
+  decaySpeed: 5
+  decay: 100
 --- !u!212 &212403498101377138
 SpriteRenderer:
   m_ObjectHideFlags: 1

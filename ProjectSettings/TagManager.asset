@@ -10,6 +10,8 @@ TagManager:
   - Counter
   - Customer
   - Exit
+  - Shelve
+  - InnerShelve
   layers:
   - Default
   - TransparentFX

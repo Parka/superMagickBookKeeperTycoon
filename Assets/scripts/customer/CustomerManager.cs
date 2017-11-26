@@ -17,7 +17,6 @@ public class CustomerManager : MonoBehaviour {
 	}
 
 	public void Randomize(GameObject customer) {
-		Debug.Log ("Hey!");
 		SpriteRenderer sr = customer.GetComponent<SpriteRenderer> ();
 		sr.color = new Color (Random.value, Random.value, Random.value, 1.0f);
 		CustStateManager sm = customer.GetComponent<CustStateManager> ();	
