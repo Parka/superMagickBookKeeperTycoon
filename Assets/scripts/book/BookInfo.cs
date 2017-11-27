@@ -7,7 +7,7 @@ public class BookInfo : MonoBehaviour {
 	public BookManager.BookType type;
 	public BookManager.BookTopic topic;
     public string bookName;
-	private Collider2D collider;
+//	private Collider2D collider;
 	private bool onShelve = false;
 
 	public double decaySpeed = 5;
@@ -15,7 +15,7 @@ public class BookInfo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		collider = GetComponent<Collider2D> ();
+//		collider = GetComponent<Collider2D> ();
 	}
 	
 	// Update is called once per frame

@@ -14,8 +14,7 @@ public class PlayerLadder : ComponentState<PlayerStateManager>{
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        lrb = stateManager.currentLadder.GetComponent<Rigidbody2D>();
-        ladderVel = stateManager.currentLadder.GetComponent<LadderManager>().vel;
+
         addCheck<PlayerFloor>(() =>
         {
             return Input.GetAxis("Vertical") < 0 && isOnFloor;
@@ -24,6 +23,8 @@ public class PlayerLadder : ComponentState<PlayerStateManager>{
 	
     private void OnEnable()
     {
+		lrb = stateManager.currentLadder.GetComponent<Rigidbody2D>();
+		ladderVel = stateManager.currentLadder.GetComponent<LadderManager>().vel;
         if(rb != null)
             rb.gravityScale = 0;
     }

@@ -38,8 +38,10 @@ public class PlayerFloor : ComponentState<PlayerStateManager> {
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Ladder" && collider.IsTouching(ladderPlayerCollider))
-            stateManager.currentLadder = collider.gameObject;
+		if (collider.gameObject.tag == "Ladder" && collider.IsTouching (ladderPlayerCollider)) {
+			Debug.Log (collider.gameObject);
+			stateManager.currentLadder = collider.gameObject;
+		}
     }
     private void OnTriggerExit2D(Collider2D collider)
     {

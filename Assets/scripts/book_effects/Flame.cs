@@ -9,7 +9,7 @@ public class Flame : MonoBehaviour {
 	private Collider2D colliderPropagateFar;
 
 	[SerializeField]
-	private int propagateFarChances = 10;
+	private int propagateFarChances = 10; //Note: The larger the number the lower the odds (i.e.: 1 in chances)
 	[SerializeField]
 	private int propagateNearChances = 5;
 
@@ -46,7 +46,6 @@ public class Flame : MonoBehaviour {
 		}
 
 		//Ruin book
-		Debug.Log("I'm burning!");
 		affectedBook.GetComponent<BookInfo>().decay -= Time.deltaTime*burnIntensity;
 	}
 
