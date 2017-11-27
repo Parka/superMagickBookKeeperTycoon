@@ -42,4 +42,11 @@ public class BookInfo : MonoBehaviour {
 			onShelve = true;
 		}
 	}
+	private void OnTriggerEnter2D(Collider2D collider)
+	{
+		if (collider.gameObject.tag == "InnerShelve")
+		{
+			onShelve = true;
+		}
+	}
 }

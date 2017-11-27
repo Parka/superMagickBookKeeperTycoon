@@ -21,10 +21,11 @@ public class Flame : MonoBehaviour {
 
 	public double decaySpeed = 5;
 	public double decay = 100;
+	public double burnIntensity = 1;
 
 	// Use this for initialization
 	void Start () {
-
+		affectedBook = transform.parent.gameObject;
 	}
 
 	// Update is called once per frame
@@ -43,6 +44,10 @@ public class Flame : MonoBehaviour {
 		if (decay <= 0) {
 			Destroy (gameObject);
 		}
+
+		//Ruin book
+		Debug.Log("I'm burning!");
+		affectedBook.GetComponent<BookInfo>().decay -= Time.deltaTime*burnIntensity;
 	}
 
 	private void propagate(HashSet<GameObject> targetBooks, int chances){
