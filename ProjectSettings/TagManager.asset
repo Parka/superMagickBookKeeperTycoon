@@ -12,6 +12,7 @@ TagManager:
   - Exit
   - Shelve
   - InnerShelve
+  - Pivot
   layers:
   - Default
   - TransparentFX
