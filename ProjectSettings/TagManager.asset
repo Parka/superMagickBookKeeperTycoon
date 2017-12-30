@@ -13,6 +13,7 @@ TagManager:
   - Shelve
   - InnerShelve
   - Pivot
+  - Puddle
   layers:
   - Default
   - TransparentFX

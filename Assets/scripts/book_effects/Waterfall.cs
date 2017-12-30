@@ -6,6 +6,12 @@ public class Waterfall : MonoBehaviour {
 
 	//private HashSet<GameObject> initialShelves = new HashSet<GameObject>();
 	// Use this for initialization
+	[SerializeField]
+	GameObject puddlePrefab;
+
+	//[SerializeField]
+	float flow = 1f;
+
 	void Start () {
 		
 	}
@@ -16,19 +22,25 @@ public class Waterfall : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		GameObject newPuddle;
 		RaycastHit2D[] hits = Physics2D.RaycastAll(transform.parent.position, -Vector2.up);
 		foreach(RaycastHit2D hit in hits){
-			if (hit.collider != null & !hit.collider.isTrigger & (hit.collider.gameObject.tag =="Shelve" | hit.collider.gameObject.tag =="Floor")) {
-				//if(!initialShelves.Contains(hit.collider.gameObject)){
-					float distance = Mathf.Abs(hit.point.y - transform.parent.position.y);
-					//Debug.DrawRay(hit.point, hit.normal, Color.green, 2, false);
-					//Debug.Log (initialShelves);
-					if(distance>0){
-						gameObject.transform.localScale = new Vector3 (1, distance / (GetComponent<Renderer>().bounds.size.y/gameObject.transform.localScale.y), 1);
-						gameObject.transform.position = transform.parent.position - Vector3.up * distance/2;
+			if(hit.collider != null){
+				float distance = Mathf.Abs(hit.point.y - transform.parent.position.y);
+				if(distance>0.1 ){
+					gameObject.transform.localScale = new Vector3 (1, distance / (GetComponent<Renderer>().bounds.size.y/gameObject.transform.localScale.y), 1);
+					gameObject.transform.position = transform.parent.position - Vector3.up * distance/2;
+					if (hit.collider.gameObject.tag == "Puddle") {
+						//Debug.DrawRay(hit.point, hit.normal, Color.green, 2, false);
+						hit.collider.gameObject.GetComponent<Puddle>().addInFlow(flow);
+						break;
 					}
-					break;
-				//}
+					else if (!hit.collider.isTrigger & (hit.collider.gameObject.tag =="Shelve" | hit.collider.gameObject.tag =="Floor")) {
+						newPuddle = Instantiate (puddlePrefab);
+						newPuddle.transform.position = (Vector3) hit.point;
+						break;
+					}
+				}
 			}
 		}
 	}

@@ -939,7 +939,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016661239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.479, y: -0.313, z: 0}
+  m_LocalPosition: {x: 4.799, y: -1.182, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1582269453}
@@ -948,7 +948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.479, y: -0.313}
+  m_AnchoredPosition: {x: 4.799, y: -1.182}
   m_SizeDelta: {x: 0.2, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016661242
@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 1121592145}
   m_Layer: 8
   m_Name: shelves (2)
-  m_TagString: Untagged
+  m_TagString: Shelve
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1206,7 +1206,7 @@ Transform:
   - {fileID: 506256617}
   - {fileID: 1627107705}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1121592145
 BoxCollider2D:
@@ -1338,7 +1338,7 @@ GameObject:
   - component: {fileID: 1183513608}
   m_Layer: 8
   m_Name: shelves (1)
-  m_TagString: Untagged
+  m_TagString: Shelve
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1520,7 +1520,7 @@ Prefab:
     - target: {fileID: 224756478765947738, guid: 355bff8b73a404c49a29acbf56925e7f,
         type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224756478765947738, guid: 355bff8b73a404c49a29acbf56925e7f,
         type: 2}
@@ -1907,6 +1907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f6f57fcbc6f8a40bedbcbeb5c69234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puddlePrefab: {fileID: 1101566702870706, guid: afeaaadda6e8be84f984f40e8a0f4651,
+    type: 2}
+  flow: 1
 --- !u!212 &1582269452
 SpriteRenderer:
   m_ObjectHideFlags: 0
